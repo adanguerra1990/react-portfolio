@@ -72,7 +72,9 @@ body {
   color: var(--text-color);
 }
 
-input textarea button {
+input,
+textarea,
+button {
   outline: none;
   border: none;
 }
@@ -309,7 +311,6 @@ svg {
 }
 
 /*=============== ABOUT ===============*/
-.about {}
 
 .about__container {
   row-gap: 2.5rem;
@@ -384,8 +385,6 @@ svg {
 }
 
 /*=============== PROJECTS ===============*/
-.projects {}
-
 .projects__container {
   row-gap: 2rem;
   justify-content: center;
@@ -458,6 +457,54 @@ svg {
   bottom: 0;
 }
 
+/*=============== CONTACT ===============*/
+.contact {
+  background-color: var(--container-color);
+}
+
+.contact__container {
+  padding-top: 1rem;
+}
+
+.contact__form,
+.contact__group {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contact__form {
+  position: relative;
+}
+
+.contact__input {
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  background-color: var(--body-color);
+  color: var(--title-color);
+}
+
+.contact__input::placeholder {
+  color: var(--text-color);
+}
+
+.contact__form textarea {
+  height: 11rem;
+  resize: none;
+  margin-bottom: 2rem;
+}
+
+.contact__message {
+  position: absolute;
+  left: 0;
+  bottom: 4.5rem;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.contact__button {
+  justify-self: center;
+  cursor: pointer;
+}
 
 
 /*=============== BREAKPOINTS ===============*/
@@ -523,7 +570,6 @@ svg {
     grid-template-columns: repeat(2, 350px);
   }
 }
-
 
 /* For large devices */
 
