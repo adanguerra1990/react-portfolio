@@ -1,8 +1,10 @@
 import About from './components/About'
 import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './components/Home'
 import Projects from './components/Projects'
+import ScrollUp from './components/ScrollUp'
 import Skills from './components/Skills'
 
 function App() {
@@ -94,6 +96,13 @@ function App() {
                 </section>
                 <ContactForm />
             </main>
+            <Footer 
+                nameTitle='Adan'
+                lastnameTitle='Guerra'
+                education='Front-end Developer'
+                copyright='Copyright Bedimcode. All rights reserved'
+            />
+            <ScrollUp />
         </div>
     )
 }
