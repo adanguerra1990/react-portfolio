@@ -12,7 +12,7 @@ const ScrollUp = () => {
           window.addEventListener('scroll', checkScrolleTop)
 
           return () => window.removeEventListener('scroll', checkScrolleTop)
-     })
+     }, [])
 
      const getClassName = () => {
           return `scrollup ${isScrolled  ? 'show-scroll' : ''}`
