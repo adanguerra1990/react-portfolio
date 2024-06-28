@@ -13,48 +13,48 @@ function App() {
     const projects = [
         {
             title: 'Modern website',
-            subtitle: 'Web',          
+            subtitle: 'Web',
             image: '/src/assets/img/project-img-1.jpg',
             url: '#',
             id: 1
         },
         {
             title: 'Advic Generator App',
-            subtitle: 'Fech API',          
-            image: '/src/assets/img/project-img-2.jpg',            
+            subtitle: 'Fech API',
+            image: '/src/assets/img/project-img-2.jpg',
             url: '#',
             id: 2
         },
         {
             title: 'Landingpage Snnyside',
-            subtitle: 'Web Site',          
-            image: '/src/assets/img/project-img-3.jpg',            
+            subtitle: 'Web Site',
+            image: '/src/assets/img/project-img-3.jpg',
             url: '#',
             id: 3
         },
         {
             title: 'Blog Lists',
-            subtitle: 'Api Rest',          
-            image: '/src/assets/img/project-img-4.jpg',            
+            subtitle: 'Api Rest',
+            image: '/src/assets/img/project-img-4.jpg',
             url: '#',
             id: 4
         },
         {
             title: 'Web Festival de Musicas',
-            subtitle: 'Web Site',          
-            image: '/src/assets/img/project-img-5.jpg',            
+            subtitle: 'Web Site',
+            image: '/src/assets/img/project-img-5.jpg',
             url: '#',
             id: 5
         },
         {
             title: 'Web Festival de Musicas',
-            subtitle: 'Web Site',          
-            image: '/src/assets/img/project-img-6.jpg',            
+            subtitle: 'Web Site',
+            image: '/src/assets/img/project-img-6.jpg',
             url: '#',
             id: 6
         }
     ]
-    
+
     return (
         <div>
             <Header />
@@ -76,27 +76,12 @@ function App() {
                     button={'See Projects'}
                     skills={skills}
                 />
-                <section className='projects section' id='projects'>
-                    <h3 className='section__subtitle'>
-                        My <span>Jobs</span>
-                    </h3>
-
-                    <h2 className='section__title'>
-                        Recent Projects
-                    </h2>
-
-                    <div className="projects__container container grid">
-                        {projects.map(project => (
-                            <Projects
-                                key={project.id}
-                                projects={project}
-                            />
-                        ))}
-                    </div>
-                </section>
+                <Projects 
+                    projects={projects}
+                />
                 <ContactForm />
             </main>
-            <Footer 
+            <Footer
                 nameTitle='Adan'
                 lastnameTitle='Guerra'
                 education='Front-end Developer'
