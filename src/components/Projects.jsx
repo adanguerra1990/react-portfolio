@@ -1,20 +1,31 @@
-import { RiExternalLinkLine } from '@remixicon/react';
+import Project from './Project';
 
 const Projects = ({ projects }) => {
+    console.log('projects...', projects)
     return (
-        <article className="projects__card">            
-            <img src={projects.image} alt="imagen proyecto" className="projects__img" />
+        <section className='projects section' id='projects'>
+            <h3 className='section__subtitle'>
+                My <span>Jobs</span>
+            </h3>
 
-            <div className="projects__modal">
-                <span className="projects__subtitle">{projects.subtitle}</span>
+            <h2 className='section__title'>
+                Recent Projects
+            </h2>
 
-                <h2 className="projects__title">{projects.title}</h2>
-
-                <a href={projects.url} className="projects__button">
-                    View demo <RiExternalLinkLine />
-                </a>
-            </div>
-        </article>
+            
+                <div className="projects__container container grid" >
+                    {projects.map((project) => (
+                        <Project
+                            key={project.id}
+                            image={project.image}
+                            title={project.title}
+                            subtitle={project.subtitle}
+                            url={project.url}
+                        />
+                    )
+                    )}
+                </div>            
+        </section>
     );
 }
 

@@ -7,7 +7,7 @@ const Header = () => {
     const [activeSection, setActiveSection] = useState('')
 
     const navigationLinks = [
-        { title: 'Inicio', href: '#home' },
+        { title: 'Inicio', href: '#' },
         { title: 'Acerca de Mí', href: '#about' },
         { title: 'Proyectos', href: '#projects' },
         { title: 'Contacto', href: '#contact' },
@@ -59,7 +59,7 @@ const Header = () => {
     return (
         <header className={getClassHeader()} id='header'>
             <nav className='nav container'>
-                <a href="#" className="nav__logo">
+                <a href="#header" className="nav__logo">
                     ADAN <span>GUERRA</span>
                 </a>
 

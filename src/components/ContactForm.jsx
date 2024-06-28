@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com'
+import { Fade } from 'react-awesome-reveal';
+import { animationUP } from './animation.js'
 
 const ContactForm = () => {
      const [contacMessage, setContacMessage] = useState('')
@@ -31,7 +33,14 @@ const ContactForm = () => {
                     Contact Me
                </h2>
 
-               <div className='contact__container container grid'>
+               <Fade
+                    className='contact__container container grid'
+                    keyframes={animationUP}
+                    duration={2000}
+                    delay={500}
+                    cascade
+                    triggerOnce
+               >
                     <form onSubmit={sentEmail} className='contact__form' id='contact-form'>
                          <div className='contact__group'>
                               <input
@@ -65,7 +74,7 @@ const ContactForm = () => {
                          </button>
 
                     </form>
-               </div>
+               </Fade>
           </section>
      );
 }
